@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback — Musicism</title>
+  <meta name="description" content="Tell Musicism what you think — agree, disagree, or suggest a track for review." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="wordmark">Musicism</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="flashpoint.html">Flashpoint</a>
+        <a href="membership.html">Membership</a>
+        <a href="feedback.html" class="active">Feedback</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Tell us what you think</div>
+        <h1>Feedback</h1>
+        <p>Agree with a score? Think we missed something? Got a track that belongs on the Flashpoint list? This is the place.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <form action="mailto:hello@musicism.example" method="post" enctype="text/plain">
+          <div>
+            <label for="type">What is this about?</label>
+            <select id="type" name="type">
+              <option>A specific review or score</option>
+              <option>Track / album suggestion for review</option>
+              <option>Flashpoint suggestion</option>
+              <option>General feedback on the site</option>
+            </select>
+          </div>
+          <div>
+            <label for="reference">Track, album, or review title (if applicable)</label>
+            <input type="text" id="reference" name="reference" placeholder="e.g. &quot;Track Title&quot; — Artist Name">
+          </div>
+          <div>
+            <label for="stance">Where do you land?</label>
+            <select id="stance" name="stance">
+              <option>I agree with the score</option>
+              <option>I think the score is too high</option>
+              <option>I think the score is too low</option>
+              <option>Not about a score</option>
+            </select>
+          </div>
+          <div>
+            <label for="comments">Tell us more</label>
+            <textarea id="comments" name="comments" placeholder="Be specific — which category, which moment in the track, what you'd argue instead." required></textarea>
+          </div>
+          <div>
+            <label for="email">Email (optional, if you'd like a reply)</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <button type="submit" class="btn">Send feedback</button>
+        </form>
+
+        <div class="notice">
+          <strong>Note:</strong> this form is a UI placeholder — wire it up to a form backend
+          (e.g. Formspree, Basin, or a simple serverless function) before launch. Until then,
+          it opens the visitor's email client via <code>mailto:</code>.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="wordmark">Musicism</div>
+      <div class="links">
+        <a href="reviews.html">Reviews</a>
+        <a href="flashpoint.html">Flashpoint</a>
+        <a href="membership.html">Membership</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

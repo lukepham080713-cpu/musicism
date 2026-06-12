@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews — Musicism</title>
+  <meta name="description" content="Song, album, and Flashpoint reviews — scored against Musicism's transparent rubric." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="wordmark">Musicism</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="reviews.html" class="active">Reviews</a>
+        <a href="flashpoint.html">Flashpoint</a>
+        <a href="membership.html">Membership</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom: 40px;">
+      <div class="wrap">
+        <div class="eyebrow">Archive</div>
+        <h1 style="font-size: clamp(36px, 6vw, 60px);">Reviews</h1>
+        <p>Songs, albums, and Flashpoints — every score backed by the rubric.</p>
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-filter="all">All</button>
+          <button class="tab" data-filter="song">Songs</button>
+          <button class="tab" data-filter="album">Albums</button>
+          <button class="tab" data-filter="flashpoint">Flashpoints</button>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top: 40px;">
+      <div class="wrap">
+        <div class="grid" id="review-grid">
+
+          <a href="review-sample.html" class="card" data-cat="flashpoint">
+            <div class="meta"><span class="tag tag-flashpoint">Flashpoint</span><span class="score">87</span></div>
+            <h3>"Track Title"</h3>
+            <div class="artist">Artist Name</div>
+            <p class="blurb">The bridge resolves a chord that never lands — on purpose — and it's the smartest four bars on the record.</p>
+          </a>
+
+          <a href="review-sample.html" class="card" data-cat="song">
+            <div class="meta"><span class="tag tag-outline">Song</span><span class="score">—</span></div>
+            <h3>"Track Title"</h3>
+            <div class="artist">Artist Name</div>
+            <p class="blurb">A placeholder single review — swap in the track once it's drafted.</p>
+          </a>
+
+          <a href="review-sample.html" class="card" data-cat="song">
+            <div class="meta"><span class="tag tag-outline">Song</span><span class="score">—</span></div>
+            <h3>"Track Title"</h3>
+            <div class="artist">Artist Name</div>
+            <p class="blurb">A placeholder single review — swap in the track once it's drafted.</p>
+          </a>
+
+          <a href="review-sample.html" class="card" data-cat="album">
+            <div class="meta"><span class="tag tag-outline">Album</span><span class="score">—</span></div>
+            <h3>"Album Title"</h3>
+            <div class="artist">Artist Name</div>
+            <p class="blurb">A track-by-track breakdown of the record's strongest and weakest structural decisions.</p>
+          </a>
+
+          <a href="review-sample.html" class="card" data-cat="song">
+            <div class="meta"><span class="tag tag-outline">Song</span><span class="score">—</span></div>
+            <h3>"Track Title"</h3>
+            <div class="artist">Artist Name</div>
+            <p class="blurb">A placeholder single review — swap in the track once it's drafted.</p>
+          </a>
+
+          <a href="review-sample.html" class="card" data-cat="flashpoint">
+            <div class="meta"><span class="tag tag-flashpoint">Flashpoint</span><span class="score">—</span></div>
+            <h3>"Track Title"</h3>
+            <div class="artist">Artist Name</div>
+            <p class="blurb">The internet loved this one. The rubric disagrees — and here's the category where the gap actually lives.</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="wordmark">Musicism</div>
+      <div class="links">
+        <a href="reviews.html">Reviews</a>
+        <a href="flashpoint.html">Flashpoint</a>
+        <a href="membership.html">Membership</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const cards = document.querySelectorAll('#review-grid .card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+
+        cards.forEach(card => {
+          const cat = card.dataset.cat;
+          card.style.display = (filter === 'all' || cat === filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

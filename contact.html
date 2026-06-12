@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Musicism</title>
+  <meta name="description" content="Get in touch with Musicism — press, collaborations, corrections, and submissions." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="wordmark">Musicism</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="flashpoint.html">Flashpoint</a>
+        <a href="membership.html">Membership</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Get in touch</div>
+        <h1>Contact</h1>
+        <p>Press, collaborations, track submissions, or a correction on something we got wrong — send it through.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <form action="mailto:hello@musicism.example" method="post" enctype="text/plain">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option>General inquiry</option>
+              <option>Track / album submission</option>
+              <option>Press &amp; collaborations</option>
+              <option>Correction or factual error</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send message</button>
+        </form>
+
+        <div class="notice">
+          <strong>Note:</strong> this form is a UI placeholder — wire it up to a form backend
+          (e.g. Formspree, Basin, or a simple serverless function) before launch so submissions
+          actually land somewhere. Until then, it opens the visitor's email client via
+          <code>mailto:</code>.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="wordmark">Musicism</div>
+      <div class="links">
+        <a href="reviews.html">Reviews</a>
+        <a href="flashpoint.html">Flashpoint</a>
+        <a href="membership.html">Membership</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
